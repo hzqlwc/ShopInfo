@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" namespace="/" extends="struts-default">
+
+<action name="ServiceInfo" class="ShopAction" method="selectallinfo">
+<result>/shops.jsp</result>
+</action>
+
+<action name="idinfo" class="ShopAction">
+<result>/shops.jsp</result>
+</action>
+
+<action name="stocks" class="StockAction">
+<result>/stacks.jsp</result>
+</action>
+
+<action name="addStocks" class="StockAction" method="addStocks">
+<result type="redirect">stocks.action</result>
+</action>
+
+<action name="sells" class="SellAction">
+<result>/sells.jsp</result>
+</action>
+
+
+
+<action name="add" class="ShopAction" method="add">
+<result type="redirect">ServiceInfo.action</result>
+</action>
+
+  <action name="delete" class="ShopAction" method="delete">
+   <result type="redirect">ServiceInfo.action</result>
+  </action>
+  
+   <action name="edit" class="ShopAction" method="edit">
+   <result type="redirect">/updateshops.jsp</result>
+    
+ </action>
+
+   <action name="update" class="ShopAction" method="update">
+   <result type="redirect">ServiceInfo.action</result>
+    
+ </action>
+
+
+
+</package>
+
+
+
+</struts>    
